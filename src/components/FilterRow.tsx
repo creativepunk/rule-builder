@@ -1,6 +1,7 @@
 import { forwardRef, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import type { CSSProperties, ReactNode } from 'react';
 import { DsMultiSelectMenu, DsMultiSelectMenuItem, type DsMultiSelectMenuElement } from './DsMultiSelectMenu';
+import type { DsMultiSelectMenuItem as LitDsMultiSelectMenuItem } from '@my-ds/components/ds-multi-select-menu/ds-multi-select-menu-item.js';
 import { DsSingleSelectMenu, DsSingleSelectMenuItem } from './DsSingleSelectMenu';
 import { DsTag } from './DsTag';
 import type { Variant } from '../App';
@@ -328,7 +329,7 @@ interface FilterRowProps {
   showRemove?: boolean;
 }
 
-export function FilterRow({ paramValue, onRemove, onParamSelected, width = '600px', variant = 1, showRemove = false }: FilterRowProps) {
+export function FilterRow({ paramValue, onRemove, onParamSelected, width = '600px', variant = 1 }: FilterRowProps) {
   const [param, setParam] = useState(paramValue ?? '');
   const [operator, setOperator] = useState('is-any-of');
   const [paramQuery, setParamQuery] = useState('');
@@ -344,7 +345,7 @@ export function FilterRow({ paramValue, onRemove, onParamSelected, width = '600p
   const operatorType = OPERATOR_VALUE_TYPE[operator] ?? 'multi';
 
   const menuRef = useRef<DsMultiSelectMenuElement>(null);
-  const selectAllItemRef = useRef<HTMLElement>(null);
+  const selectAllItemRef = useRef<LitDsMultiSelectMenuItem>(null);
 
   const containerRef       = useRef<HTMLDivElement>(null);
   const paramRef           = useRef<HTMLButtonElement>(null);
@@ -967,7 +968,7 @@ export function FilterRow({ paramValue, onRemove, onParamSelected, width = '600p
             left: segmentLeft.param,
             zIndex: 100,
             '--ds-focus-focus': 'transparent',
-          } as React.CSSProperties}
+          } as unknown as React.CSSProperties}
           onMouseDown={e => e.preventDefault()}
         >
           <DsSingleSelectMenu onDsSelectMenuChange={handleParamSelect}>
@@ -992,7 +993,7 @@ export function FilterRow({ paramValue, onRemove, onParamSelected, width = '600p
             left: segmentLeft.operator,
             zIndex: 100,
             '--ds-focus-focus': 'transparent',
-          } as React.CSSProperties}
+          } as unknown as React.CSSProperties}
           onMouseDown={e => e.preventDefault()}
         >
           <DsSingleSelectMenu onDsSelectMenuChange={handleOperatorSelect}>
@@ -1018,7 +1019,7 @@ export function FilterRow({ paramValue, onRemove, onParamSelected, width = '600p
             right: 0,
             zIndex: 100,
             '--ds-focus-focus': 'transparent',
-          } as React.CSSProperties}
+          } as unknown as React.CSSProperties}
           onMouseDown={e => e.preventDefault()}
         >
           <DsMultiSelectMenu ref={menuRef} selectionFeedback="top-after-reopen" style={{ width: '100%' }} onDsSelectMenuChange={handleValuesChange}>

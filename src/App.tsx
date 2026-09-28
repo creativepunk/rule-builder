@@ -59,7 +59,7 @@ function FilterConnector({ value, onToggle }: { value: Connector; onToggle: () =
 
 // ── Filter group ──────────────────────────────────────────────────────────────
 
-function FilterGroup({ onRemove, variant = 1, onParamSelected, showRemove = false, defaultConnector = 'or' }: { onRemove: () => void; variant?: Variant; onParamSelected?: () => void; showRemove?: boolean; defaultConnector?: Connector }) {
+function FilterGroup({ onRemove, variant = 1, onParamSelected, defaultConnector = 'or' }: { onRemove: () => void; variant?: Variant; onParamSelected?: () => void; showRemove?: boolean; defaultConnector?: Connector }) {
   // initialId is used for both the first filter and the initial pendingId
   const initialId = React.useRef(crypto.randomUUID());
   const [filters, setFilters] = useState<FilterEntry[]>([{ id: initialId.current }]);
