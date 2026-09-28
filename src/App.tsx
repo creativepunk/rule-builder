@@ -285,7 +285,7 @@ function FilterGroupV1({ name, onNameChange, onRemove }: {
 // ── Filter Section V1 ─────────────────────────────────────────────────────────
 
 function FilterSectionV1({ title }: { title: string }) {
-  const [groups, setGroups] = useState<GroupEntry[]>(() => [{ id: crypto.randomUUID(), name: 'Rule 1' }]);
+  const [groups, setGroups] = useState<GroupEntry[]>([]);
   const [connectors, setConnectors] = useState<Connector[]>([]);
 
   function addGroup() {
