@@ -271,7 +271,7 @@ const Segment = forwardRef<HTMLButtonElement, SegmentProps>(
   function Segment({ children, onClick, isActive = false, separator = true, style, variant = 1 }, ref) {
     const [hovered, setHovered] = useState(false);
 
-    const defaultBg = variant === 3 ? 'var(--ds-background-neutral-default)' : 'transparent';
+    const defaultBg = 'transparent';
     let bg = defaultBg;
     if (isActive)     bg = 'var(--ds-background-input-hovered)';
     else if (hovered) bg = 'var(--ds-background-input-hovered)';
@@ -286,14 +286,14 @@ const Segment = forwardRef<HTMLButtonElement, SegmentProps>(
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         style={{
-          height: (variant === 3 || variant === 4) ? '28px' : '100%',
+          height: variant === 4 ? '28px' : '100%',
           padding: '0 10px',
           display: 'flex',
           alignItems: 'center',
           gap: '6px',
           background: bg,
           border: 'none',
-          borderRadius: variant === 3 ? '4px' : variant === 4 ? (isActive ? '4px' : '0px') : undefined,
+          borderRadius: variant === 4 ? (isActive ? '4px' : '0px') : undefined,
           borderRight: hasSeparator ? '1px solid var(--ds-border-border-bold)' : 'none',
           borderBottom: variant === 4 ? (isActive ? 'none' : hovered ? 'none' : '1px solid var(--ds-border-border-bold)') : undefined,
           boxShadow: variant === 4 ? (isActive ? 'inset 0 0 0 1px var(--ds-focus-focus)' : 'none') : undefined,
@@ -654,12 +654,12 @@ export function FilterRow({ paramValue, onRemove, onParamSelected, width = '600p
           height: variant === 4 ? undefined : '32px',
           minHeight: variant === 4 ? '28px' : undefined,
           borderRadius: '8px 0px 8px 8px',
-          gap: variant === 4 ? '8px' : variant === 3 ? '2px' : undefined,
+          gap: variant === 4 ? '8px' : undefined,
           boxShadow: anyOpen && variant !== 4
             ? 'inset 0 0 0 1px var(--ds-focus-focus)'
             : error && variant !== 4
             ? 'inset 0 0 0 1px var(--ds-border-border-danger)'
-            : (variant === 3 || variant === 4)
+            : variant === 4
             ? 'none'
             : 'inset 0 0 0 1px var(--ds-border-border-bold)',
           background: anyOpen && variant !== 4 ? 'var(--ds-background-input-pressed)' : 'transparent',
