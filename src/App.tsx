@@ -292,7 +292,7 @@ function FilterSectionV1({ title }: { title: string }) {
     const id = crypto.randomUUID();
     setGroups(prev => {
       const num = prev.length + 1;
-      setConnectors(c => [...c, 'and']);
+      setConnectors(c => [...c, 'or']);
       return [...prev, { id, name: `Rule ${num}` }];
     });
   }
