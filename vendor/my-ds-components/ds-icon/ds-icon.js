@@ -1,0 +1,123 @@
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+import { LitElement, html, css } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { resetStyles } from '../shared/styles.js';
+/** @deprecated No longer needed — ds-icon uses the variable font directly. */
+export function setIconResolver(_resolver) { }
+/** @deprecated No longer needed — ds-icon uses the variable font directly. */
+export function createMaterialSymbolsResolver(_iconStyle) {
+    return async () => '';
+}
+// opsz axis value per display size:
+//   sm (16px) → 20  (Google minimum optical size)
+//   md (20px) → 24
+//   lg (24px) → 48
+const OPSZ = { sm: 20, md: 24, lg: 48 };
+const PX = {
+    sm: 'var(--ds-spacing-spacing-06)', /* 16px */
+    md: 'var(--ds-type-scale-y3)', /* 20px */
+    lg: 'var(--ds-type-scale-y4)', /* 24px */
+};
+/** @tagname ds-icon */
+let DsIcon = class DsIcon extends LitElement {
+    constructor() {
+        super(...arguments);
+        this.name = '';
+        this.size = 'md';
+        this.iconStyle = 'outlined';
+        this.fill = false;
+    }
+    render() {
+        if (!this.name) {
+            return html `<slot></slot>`;
+        }
+        const opsz = OPSZ[this.size] ?? 24;
+        const px = PX[this.size] ?? PX.md;
+        const fillVal = this.fill ? 1 : 0;
+        const variationSettings = `'FILL' ${fillVal}, 'wght' 400, 'GRAD' 0, 'opsz' ${opsz}`;
+        return html `
+      <span
+        class="icon-font"
+        aria-hidden="true"
+        style="font-variation-settings: ${variationSettings}; font-size: ${px};"
+      >${this.name}</span>
+    `;
+    }
+};
+DsIcon.styles = [
+    resetStyles,
+    css `
+      :host {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: var(--ds-type-scale-y3);
+        height: var(--ds-type-scale-y3);
+        color: inherit;
+        flex-shrink: 0;
+      }
+
+      :host([size='sm']) { width: var(--ds-spacing-spacing-06); height: var(--ds-spacing-spacing-06); }
+      :host([size='md']), :host(:not([size])) { width: var(--ds-type-scale-y3); height: var(--ds-type-scale-y3); }
+      :host([size='lg']) { width: var(--ds-type-scale-y4); height: var(--ds-type-scale-y4); }
+
+      .icon-font {
+        font-family: 'Material Symbols Outlined';
+        font-weight: normal;
+        font-style: normal;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        font-feature-settings: 'liga';
+        /* font-size drives ligature glyph dimensions — match the host size */
+        font-size: inherit;
+        /* filled via CSS property so fill toggling doesn't need JS */
+        color: inherit;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        user-select: none;
+      }
+
+      :host([icon-style='rounded']) .icon-font { font-family: 'Material Symbols Rounded'; }
+      :host([icon-style='sharp']) .icon-font   { font-family: 'Material Symbols Sharp'; }
+
+      /* Custom icon via default slot */
+      ::slotted(svg),
+      ::slotted(img) {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    `,
+];
+__decorate([
+    property({ type: String, reflect: true })
+], DsIcon.prototype, "name", void 0);
+__decorate([
+    property({ type: String, reflect: true })
+], DsIcon.prototype, "size", void 0);
+__decorate([
+    property({ type: String, attribute: 'icon-style', reflect: true })
+], DsIcon.prototype, "iconStyle", void 0);
+__decorate([
+    property({ type: Boolean, reflect: true })
+], DsIcon.prototype, "fill", void 0);
+DsIcon = __decorate([
+    customElement('ds-icon')
+], DsIcon);
+export { DsIcon };
+//# sourceMappingURL=ds-icon.js.map

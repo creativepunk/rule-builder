@@ -1,0 +1,54 @@
+/**
+ * @my-ds/components
+ *
+ * Lit Web Component library for My Design System.
+ * Import individual components or side-effect register them all.
+ *
+ * @example
+ * // Tree-shakeable: import only what you need
+ * import '@my-ds/components/src/ds-button.js';
+ *
+ * // Or import the class for use with @lit/react
+ * import { DsButton } from '@my-ds/components';
+ */
+// ─── Shared utilities (re-exported for wrapper authors) ──────────────────────
+export * from './shared/events.js';
+export * from './shared/styles.js';
+// ─── Components ──────────────────────────────────────────────────────────────
+// Each export both registers the custom element AND exports the class.
+// Add new components here as they are created.
+export { DsButton } from './ds-button/ds-button.js';
+export { DsIconButton } from './ds-icon-button/ds-icon-button.js';
+export { DsIcon, setIconResolver, createMaterialSymbolsResolver, } from './ds-icon/ds-icon.js';
+export { DsCalendar } from './ds-calendar/ds-calendar.js';
+export { DsTooltip } from './ds-tooltip/ds-tooltip.js';
+export { DsSplitButton } from './ds-split-button/ds-split-button.js';
+export { DsMenuCategory } from './ds-menu-category/ds-menu-category.js';
+export { DsActionMenu, DsActionMenuItem, DsActionMenuSeparator, } from './ds-action-menu/ds-action-menu.js';
+export { DsSingleSelectMenu, DsSingleSelectMenuItem, } from './ds-single-select-menu/ds-single-select-menu.js';
+export { DsMultiSelectMenu, DsMultiSelectMenuItem, } from './ds-multi-select-menu/ds-multi-select-menu.js';
+export { DsFormLabel } from './ds-form-label/ds-form-label.js';
+export { DsFormMessage } from './ds-form-message/ds-form-message.js';
+export { DsCheckbox } from './ds-checkbox/ds-checkbox.js';
+export { DsCheckboxGroup } from './ds-checkbox/ds-checkbox-group.js';
+export { DsRadio } from './ds-radio/ds-radio.js';
+export { DsRadioGroup } from './ds-radio/ds-radio-group.js';
+export { DsBadge } from './ds-badge/ds-badge.js';
+export { DsSegmentedButton, DsSegmentedButtonItem } from './ds-segmented-button/ds-segmented-button.js';
+export { DsFieldInput } from './ds-field-input/ds-field-input.js';
+export { DsSelect } from './ds-select/ds-select.js';
+export { DsCombobox } from './ds-combobox/ds-combobox.js';
+export { DsSpinner } from './ds-spinner/ds-spinner.js';
+export { DsStatusMarker } from './ds-status-marker/ds-status-marker.js';
+export { DsNumberField } from './ds-number-field/ds-number-field.js';
+export { DsSearch } from './ds-search/ds-search.js';
+export { DsTag } from './ds-tag/ds-tag.js';
+export { DsTagSelectable } from './ds-tag-selectable/ds-tag-selectable.js';
+export { DsDateInput } from './ds-date-input/ds-date-input.js';
+export { DsDatePicker } from './ds-date-picker/ds-date-picker.js';
+export { DsDateRangePicker } from './ds-date-range-picker/ds-date-range-picker.js';
+export { DsTextField } from './ds-text-field/ds-text-field.js';
+export { DsTextArea } from './ds-text-area/ds-text-area.js';
+export { DsToggle } from './ds-toggle/ds-toggle.js';
+export { DsTabs, DsTab } from './ds-tabs/ds-tabs.js';
+//# sourceMappingURL=index.js.map

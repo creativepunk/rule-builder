@@ -1,0 +1,1 @@
+{"version":3,"file":"ds-menu-separator.d.ts","sourceRoot":"","sources":["../../src/ds-menu-category/ds-menu-separator.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAa,MAAM,KAAK,CAAC;AAI5C,iCAAiC;AACjC,qBACa,eAAgB,SAAQ,UAAU;IAC7C,MAAM,CAAC,MAAM,4BAcX;IAEF,MAAM;CAGP;AAED,OAAO,CAAC,MAAM,CAAC;IACb,UAAU,qBAAqB;QAC7B,mBAAmB,EAAE,eAAe,CAAC;KACtC;CACF"}

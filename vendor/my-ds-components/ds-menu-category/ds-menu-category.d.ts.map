@@ -1,0 +1,1 @@
+{"version":3,"file":"ds-menu-category.d.ts","sourceRoot":"","sources":["../../src/ds-menu-category/ds-menu-category.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAa,MAAM,KAAK,CAAC;AAI5C;;;GAGG;AACH,gCAAgC;AAChC,qBACa,cAAe,SAAQ,UAAU;IAC5C,MAAM,CAAC,MAAM,4BAkBX;IAEF,MAAM;CAGP;AAED,OAAO,CAAC,MAAM,CAAC;IACb,UAAU,qBAAqB;QAC7B,kBAAkB,EAAE,cAAc,CAAC;KACpC;CACF"}
