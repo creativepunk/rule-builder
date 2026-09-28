@@ -1,0 +1,28 @@
+.input {
+  height: 36px;
+  padding: 0 12px;
+  background: #2a2a2a;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  color: #f0f0f0;
+  font-size: 13px;
+  font-family: inherit;
+  min-width: 0;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.12s, background 0.12s;
+}
+
+.input::placeholder {
+  color: #5a5a5a;
+}
+
+.input:hover {
+  background: #2e2e2e;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.input:focus {
+  background: #2e2e2e;
+  border-color: rgba(255, 255, 255, 0.28);
+}

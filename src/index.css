@@ -1,0 +1,48 @@
+ds-single-select-menu-item,
+ds-multi-select-menu-item {
+  white-space: normal;
+  word-break: break-word;
+}
+
+ds-button::part(button) {
+  color: var(--ds-text-text-subtle);
+}
+
+.group-name-input::selection {
+  background-color: #0168de;
+  color: #ffffff;
+}
+
+.ai-query-input::placeholder {
+  color: var(--ds-text-text-subtlest);
+}
+
+input::placeholder {
+  font-family: var(--ds-font-family-normal);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: var(--ds-elevation-default);
+}
+
+body {
+  background: var(--ds-elevation-default);
+  color: #f0f0f0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 48px 24px;
+  min-height: 100vh;
+}

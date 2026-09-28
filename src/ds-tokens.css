@@ -1,0 +1,195 @@
+/* Design system token CSS variables — dark theme */
+:root {
+  /* ── Font family ─────────────────────────────────────────────────────── */
+  --ds-font-family-normal: 'Inter', sans-serif;
+  --ds-font-family-mono: 'IBM Plex Mono', monospace;
+
+  /* ── Spacing ─────────────────────────────────────────────────────────── */
+  --ds-spacing-spacing-00: 0px;
+  --ds-spacing-spacing-01: 2px;
+  --ds-spacing-spacing-02: 4px;
+  --ds-spacing-spacing-03: 6px;
+  --ds-spacing-spacing-04: 8px;
+  --ds-spacing-spacing-05: 12px;
+  --ds-spacing-spacing-06: 16px;
+  --ds-spacing-spacing-07: 20px;
+  --ds-spacing-spacing-08: 24px;
+  --ds-spacing-spacing-09: 32px;
+  --ds-spacing-spacing-10: 40px;
+  --ds-spacing-spacing-11: 48px;
+  --ds-spacing-spacing-12: 64px;
+
+  /* ── Border radius ───────────────────────────────────────────────────── */
+  --ds-radius-semantic-radius-none: 0px;
+  --ds-radius-semantic-radius-xs: 2px;
+  --ds-radius-semantic-radius-sm: 4px;
+  --ds-radius-semantic-radius-md: 6px;
+  --ds-radius-semantic-radius-lg: 8px;
+  --ds-radius-semantic-radius-xl: 12px;
+  --ds-radius-semantic-radius-pill: 9999px;
+
+  /* ── Type scale (y-axis height slots) ───────────────────────────────── */
+  --ds-type-scale-y4: 24px;
+  --ds-type-scale-y5: 28px;
+  --ds-type-scale-y6: 32px;
+  --ds-type-scale-y7: 40px;
+  --ds-type-scale-y8: 48px;
+
+  /* ── Text colors ─────────────────────────────────────────────────────── */
+  --ds-text-text-default: #f0f0f0;
+  --ds-text-text-subtle: #acacac;
+  --ds-text-text-subtlest: #676767;
+  --ds-text-text-inverse: #161616;
+  --ds-text-text-disabled: rgba(255, 255, 255, 0.25);
+  --ds-text-text-success: #3bab5a;
+  --ds-text-text-danger: #fa4d56;
+  --ds-text-text-warning: #bc9005;
+  --ds-text-text-selected: #5799ef;
+  --ds-text-text-info: #5799ef;
+
+  /* ── Icon colors ─────────────────────────────────────────────────────── */
+  --ds-icon-icon-default: #f0f0f0;
+  --ds-icon-icon-subtle: #acacac;
+  --ds-icon-icon-subtlest: #838383;
+  --ds-icon-icon-inverse: #161616;
+  --ds-icon-icon-disabled: rgba(255, 255, 255, 0.25);
+  --ds-icon-icon-success: #3bab5a;
+  --ds-icon-icon-danger: #fa4d56;
+  --ds-icon-icon-warning: #bc9005;
+  --ds-icon-icon-selected: #5799ef;
+
+  /* ── Border colors ───────────────────────────────────────────────────── */
+  --ds-border-border-default: rgba(255, 255, 255, 0.08);
+  --ds-border-border-bold: rgba(255, 255, 255, 0.12);
+  --ds-border-border-bolder: rgba(255, 255, 255, 0.2);
+  --ds-border-border-inverse: #f0f0f0;
+  --ds-border-border-brand: #0168de;
+  --ds-border-border-disabled: rgba(255, 255, 255, 0.05);
+  --ds-border-border-interactive: #5799ef;
+  --ds-border-border-selected: #0055bd;
+  --ds-border-border-danger: #fa4d56;
+  --ds-border-border-success: #3bab5a;
+  --ds-border-border-warning: #bc9005;
+
+  /* ── Background — neutral ────────────────────────────────────────────── */
+  --ds-background-neutral-default: rgba(255, 255, 255, 0.12);
+  --ds-background-neutral-hovered: rgba(255, 255, 255, 0.2);
+  --ds-background-neutral-pressed: rgba(255, 255, 255, 0.08);
+  --ds-background-neutral-subtle-default: rgba(255, 255, 255, 0);
+  --ds-background-neutral-subtle-hovered: rgba(255, 255, 255, 0.2);
+  --ds-background-neutral-subtle-pressed: rgba(255, 255, 255, 0.08);
+  --ds-background-neutral-bold-default: #d0d0d0;
+  --ds-background-neutral-bold-hovered: #acacac;
+  --ds-background-neutral-bold-pressed: #f0f0f0;
+
+  /* ── Background — semantic ───────────────────────────────────────────── */
+  --ds-background-disabled: rgba(255, 255, 255, 0.05);
+  --ds-background-brand-default: #0055bd;
+  --ds-background-brand-hovered: #0065e0;
+  --ds-background-brand-pressed: #00398f;
+  --ds-background-danger-default: #a2191f;
+  --ds-background-danger-hovered: #c21e25;
+  --ds-background-danger-pressed: #750e13;
+  --ds-background-success-default: #3bab5a;
+  --ds-background-warning-default: #bc9005;
+  --ds-background-input-default: rgba(255, 255, 255, 0.05);
+  --ds-background-input-hovered: rgba(255, 255, 255, 0.08);
+  --ds-background-input-pressed: rgba(255, 255, 255, 0.03);
+  --ds-background-input-disabled: rgba(255, 255, 255, 0.03);
+
+  /* ── Background — selected ───────────────────────────────────────────── */
+  --ds-background-selected-default: rgba(255, 255, 255, 0.08);
+  --ds-background-selected-hovered: rgba(255, 255, 255, 0.12);
+  --ds-background-selected-pressed: rgba(255, 255, 255, 0.05);
+  --ds-background-selected-bold-default: #00235c;
+  --ds-background-selected-bold-hovered: #00398f;
+  --ds-background-selected-bold-pressed: #001433;
+  --ds-background-selected-bolder-default: #0168de;
+
+  /* ── Elevation ───────────────────────────────────────────────────────── */
+  --ds-elevation-default: #161616;
+  --ds-elevation-surface-raised-default: #202020;
+  --ds-elevation-surface-raised-2-default: #262626;
+  --ds-elevation-surface-overlay-default: #2d2d2d;
+  --ds-elevation-surface-sunken-default: #000000;
+
+  /* ── Base colors (used internally by component primitives) ──────────── */
+  --ds-color-default-neutral-white: #ffffff;
+  --ds-color-default-neutral-white-12: rgba(255, 255, 255, 0.12);
+  --ds-color-default-gray-10: #f0f0f0;
+  --ds-color-default-gray-20: #d0d0d0;
+  --ds-color-default-gray-90: #404040;
+  --ds-color-default-gray-120: #262626;
+  --ds-color-default-gray-130: #202020;
+  --ds-color-default-blue-100: #001433;
+
+  /* ── Focus ───────────────────────────────────────────────────────────── */
+  --ds-focus-focus: #ffffff;
+  --ds-focus-focus-inset: #323232;
+  --ds-focus-focus-inverse: #0168de;
+
+  /* ── Typography — cozy / medium-body-sm (used by ds-button label) ────── */
+  --ds-typography-cozy-medium-body-sm-font-family: var(--ds-font-family-normal);
+  --ds-typography-cozy-medium-body-sm-font-size: 14px;
+  --ds-typography-cozy-medium-body-sm-font-weight: 500;
+  --ds-typography-cozy-medium-body-sm-line-height: 16px;
+  --ds-typography-cozy-medium-body-sm-letter-spacing: 0.5px;
+
+  --ds-typography-cozy-medium-body-md-font-family: var(--ds-font-family-normal);
+  --ds-typography-cozy-medium-body-md-font-size: 16px;
+  --ds-typography-cozy-medium-body-md-font-weight: 500;
+  --ds-typography-cozy-medium-body-md-line-height: 20px;
+  --ds-typography-cozy-medium-body-md-letter-spacing: 0.5px;
+
+  --ds-typography-cozy-regular-body-sm-font-family: var(--ds-font-family-normal);
+  --ds-typography-cozy-regular-body-sm-font-size: 14px;
+  --ds-typography-cozy-regular-body-sm-font-weight: 400;
+  --ds-typography-cozy-regular-body-sm-line-height: 16px;
+  --ds-typography-cozy-regular-body-sm-letter-spacing: 0.16px;
+
+  --ds-typography-cozy-regular-body-md-font-family: var(--ds-font-family-normal);
+  --ds-typography-cozy-regular-body-md-font-size: 16px;
+  --ds-typography-cozy-regular-body-md-font-weight: 400;
+  --ds-typography-cozy-regular-body-md-line-height: 20px;
+  --ds-typography-cozy-regular-body-md-letter-spacing: 0.16px;
+
+  --ds-typography-cozy-regular-body-lg-font-family: var(--ds-font-family-normal);
+  --ds-typography-cozy-regular-body-lg-font-size: 20px;
+  --ds-typography-cozy-regular-body-lg-font-weight: 400;
+  --ds-typography-cozy-regular-body-lg-line-height: 24px;
+  --ds-typography-cozy-regular-body-lg-letter-spacing: 0.16px;
+
+  --ds-typography-cozy-heading-xxs-font-family: var(--ds-font-family-normal);
+  --ds-typography-cozy-heading-xxs-font-size: 14px;
+  --ds-typography-cozy-heading-xxs-font-weight: 600;
+  --ds-typography-cozy-heading-xxs-line-height: 16px;
+  --ds-typography-cozy-heading-xxs-letter-spacing: 0.16px;
+
+  --ds-typography-cozy-helper-helper-regular-font-family: var(--ds-font-family-normal);
+  --ds-typography-cozy-helper-helper-regular-font-size: 12px;
+  --ds-typography-cozy-helper-helper-regular-font-weight: 400;
+  --ds-typography-cozy-helper-helper-regular-line-height: 16px;
+  --ds-typography-cozy-helper-helper-regular-letter-spacing: 0.32px;
+
+  --ds-typography-cozy-helper-helper-medium-font-family: var(--ds-font-family-normal);
+  --ds-typography-cozy-helper-helper-medium-font-size: 12px;
+  --ds-typography-cozy-helper-helper-medium-font-weight: 500;
+  --ds-typography-cozy-helper-helper-medium-line-height: 16px;
+  --ds-typography-cozy-helper-helper-medium-letter-spacing: 0.5px;
+
+  --ds-typography-cozy-helper-helper-bold-font-family: var(--ds-font-family-normal);
+  --ds-typography-cozy-helper-helper-bold-font-size: 12px;
+  --ds-typography-cozy-helper-helper-bold-font-weight: 700;
+  --ds-typography-cozy-helper-helper-bold-line-height: 16px;
+  --ds-typography-cozy-helper-helper-bold-letter-spacing: 0.5px;
+
+  --ds-typography-cozy-regular-mono-body-sm-font-family: var(--ds-font-family-mono);
+  --ds-typography-cozy-regular-mono-body-md-font-family: var(--ds-font-family-mono);
+  --ds-typography-cozy-regular-mono-body-lg-font-family: var(--ds-font-family-mono);
+
+  /* ── Tag color tokens ───────────────────────────────────────────────────── */
+  --ds-tag-gray-tag-background: rgba(255, 255, 255, 0.08);
+  --ds-tag-gray-tag-color: #9a9a9a;
+  --ds-tag-gray-tag-icon: #9a9a9a;
+  --ds-tag-gray-tag-background-disabled: #404040;
+}
