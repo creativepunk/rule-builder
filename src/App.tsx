@@ -314,7 +314,10 @@ function FilterSectionV1({ title }: { title: string }) {
   }
 
   function toggleConnector(idx: number) {
-    setConnectors(prev => prev.map((c, i) => i === idx ? (c === 'and' ? 'or' : 'and') : c));
+    setConnectors(prev => {
+      const next = prev[idx] === 'and' ? 'or' : 'and';
+      return prev.map(() => next);
+    });
   }
 
   const titleStyle: CSSProperties = {
